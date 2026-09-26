@@ -24,6 +24,8 @@ namespace _Project.Logic.Move
         {
             var velocity = _moveComponentData.Velocity.Value * _moveParameters.Speed;
 
+            velocity = new Vector3(velocity.x, _rigidbody.linearVelocity.y, velocity.z);
+
             _rigidbody.linearVelocity = velocity;
         }
     }

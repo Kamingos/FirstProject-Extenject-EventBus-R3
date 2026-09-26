@@ -3,9 +3,9 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace _Project.Gameplay.PlayerNamespace.Installer
+namespace _Project.Gameplay.EnemyNamespace.Installer
 {
-    public class PlayerInstaller : MonoInstaller
+    public class EnemyInstaller : MonoInstaller
     {
         [SerializeField] private MoveParameters MoveParameters;
 
@@ -13,8 +13,6 @@ namespace _Project.Gameplay.PlayerNamespace.Installer
         {
             Container.Bind<IMoveComponentData>().To<MoveComponentData>().AsSingle();
             Container.Bind<MoveParameters>().FromInstance(MoveParameters).AsSingle();
-
-            Container.Bind<PlayerInputSystem>().FromNewComponentOnRoot().AsSingle().NonLazy();
 
             Container.Bind<RigidBodyMoveComponentSystem>().FromComponentOnRoot().AsSingle().NonLazy();
         }
