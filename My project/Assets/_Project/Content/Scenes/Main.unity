@@ -255,13 +255,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_03 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1378172779303584491, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.830003
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.019998893
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1895,13 +1899,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1378172779303584491, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0012841225
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.019998893
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3247,6 +3255,7 @@ GameObject:
   - component: {fileID: 1256849378}
   - component: {fileID: 1256849379}
   - component: {fileID: 1256849380}
+  - component: {fileID: 1256849381}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -3283,6 +3292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Zenject::Zenject.SceneContext
   _scriptableObjectInstallers: []
   _monoInstallers:
+  - {fileID: 1256849381}
   - {fileID: 1256849380}
   _installerPrefabs: []
   _autoRun: 1
@@ -3315,6 +3325,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_Project.Bootstrap.MainSceneInstaller
   playerPrefab: {fileID: 1723305878640329624, guid: 6638d288c8290c04eaedf6fbb23e7d02, type: 3}
   enemyPrefab: {fileID: 1723305878640329624, guid: 89c63c0adb6d4d346ab8303b9e4fd005, type: 3}
+--- !u!114 &1256849381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256849376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111b4b5a96816b54a99ff2cdf652db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Project.Bootstrap.MainSceneInstaller
 --- !u!1001 &1267344338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5009,6 +5031,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c5b2e23cbdf1049b0bd42ff84bf7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Project.Gameplay.Spawners.PlayerSpawner
+  positionsForSpawn:
+  - {x: -7, y: 0, z: 10}
+  - {x: -5, y: 0, z: -3}
+  - {x: 3, y: 0, z: -10}
+  - {x: 8, y: 0, z: 6}
 --- !u!4 &2059733187
 Transform:
   m_ObjectHideFlags: 0
@@ -5036,13 +5063,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1378172779303584491, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.629997
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.019998893
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5160,13 +5191,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1378172779303584491, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.089997
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.019998893
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2994531682042415193, guid: fd2de4bd876f4ac4980370e624362931, type: 3}
       propertyPath: m_LocalPosition.z

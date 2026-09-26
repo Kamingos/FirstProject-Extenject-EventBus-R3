@@ -2,6 +2,7 @@
 using UnityEngine;
 using _Project.Gameplay.PlayerNamespace;
 using Zenject;
+using _Project.Gameplay.PlayerNamespace.RuntimeData;
 
 namespace _Project.Gameplay.Spawners
 {
@@ -9,13 +10,23 @@ namespace _Project.Gameplay.Spawners
     {
         [SerializeField] private PlayerSettingsData playerSettingsData;
 
-        [Inject] private Player.Factory playerFactory;
+        private Player.Factory _playerFactory;
+        private PlayerContainerComponentData _playerContainer;
+
+        [Inject]
+        public void Construct(Player.Factory playerFactory, PlayerContainerComponentData playerContainer)
+        {
+            _playerFactory = playerFactory;
+            _playerContainer = playerContainer;
+        }
 
         public void Start()
         {
-            var player = playerFactory.Create();
+            var player = _playerFactory.Create();
 
             player.transform.SetPositionAndRotation(playerSettingsData.Position, playerSettingsData.QuaternionRotation);
+
+            _playerContainer.Player.Value = player;
         }
     }
 

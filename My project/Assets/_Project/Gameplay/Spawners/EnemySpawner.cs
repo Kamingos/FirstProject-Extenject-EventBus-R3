@@ -1,17 +1,24 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 using _Project.Gameplay.EnemyNamespace;
+using System.Collections.Generic;
 
 namespace _Project.Gameplay.Spawners
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [Inject] private Enemy.Factory playerFactory;
+        [SerializeField] private List<Vector3> positionsForSpawn;
+
+        [Inject] private Enemy.Factory enemyFactory;
 
         public void Start()
         {
-            var enemy = playerFactory.Create();
+            foreach (var item in positionsForSpawn)
+            {
+                var enemy = enemyFactory.Create();
+
+                enemy.transform.position = item;
+            }
         }
     }
 }

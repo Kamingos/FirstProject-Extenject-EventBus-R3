@@ -15,6 +15,8 @@ namespace _Project.Gameplay.EnemyNamespace.Installer
             Container.Bind<MoveParameters>().FromInstance(MoveParameters).AsSingle();
 
             Container.Bind<RigidBodyMoveComponentSystem>().FromComponentOnRoot().AsSingle().NonLazy();
+
+            Container.Bind<EnemyChasePlayerSystem>().FromNewComponentOnRoot().AsSingle().NonLazy();
         }
     }
 }
