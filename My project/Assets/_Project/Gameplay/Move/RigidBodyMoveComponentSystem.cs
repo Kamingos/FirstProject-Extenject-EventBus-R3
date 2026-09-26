@@ -5,9 +5,10 @@ using Zenject;
 
 namespace _Project.Logic.Move
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class RigidBodyMoveComponentSystem : MonoBehaviour
     {
-        [SerializeField] private Rigidbody _rigidbody;
+        private Rigidbody _rigidbody;
 
         private IMoveComponentData _moveComponentData;
         private MoveParameters _moveParameters;
@@ -18,6 +19,11 @@ namespace _Project.Logic.Move
             _moveComponentData = moveComponentData;
 
             _moveParameters = moveParameters;
+        }
+
+        private void Start()
+        {
+            _rigidbody = GetComponent<Rigidbody>();
         }
 
         public void FixedUpdate()

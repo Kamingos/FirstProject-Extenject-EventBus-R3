@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 534971722146863341}
   - component: {fileID: 5853868934249671031}
   - component: {fileID: 3487433147207797033}
+  - component: {fileID: 1762937552158873950}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -743,7 +744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68232ad0ed40b314b8cfe515ed302321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Project.Logic.Move.RigidBodyMoveComponentSystem
-  _rigidbody: {fileID: 3487433147207797033}
 --- !u!54 &3487433147207797033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -771,6 +771,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1762937552158873950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723305878640329624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abecf2af61dc20d48be9e1ac501061ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Project.Gameplay.Move.RotateToMoveDirectionSystem
 --- !u!1 &1771554536832135577
 GameObject:
   m_ObjectHideFlags: 0
